@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C42A6E94-D88B-440F-8F5D-8354D7342B23}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RegexTester</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="RegexTester\My\MyApplication.cs" />
+    <Compile Include="RegexTester\My\MyComputer.cs" />
+    <Compile Include="RegexTester\My\MyProject.cs" />
+    <Compile Include="RegexTester\AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\AlphaComparer.cs" />
+    <Compile Include="RegexTester\ShortestComparer.cs" />
+    <Compile Include="RegexTester\LargestComparer.cs" />
+    <Compile Include="RegexTester\CompileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\RegexInfo.cs" />
+    <Compile Include="RegexTester\Command.cs" />
+    <Compile Include="RegexTester\DetailOption.cs" />
+    <Compile Include="RegexTester\SortOption.cs" />
+    <Compile Include="RegexTester\FormatOption.cs" />
+    <Compile Include="RegexTester\LanguageOption.cs" />
+    <Compile Include="RegexTester\EscapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\GenerateCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\Helpers.cs" />
+    <Compile Include="RegexTester\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\NodeInfo.cs" />
+    <Compile Include="RegexTester\My\Resources\Resources.cs" />
+    <Compile Include="RegexTester\Settings.cs" />
+    <Compile Include="RegexTester\ProjectOptions.cs" />
+    <Compile Include="RegexTester\PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="RegexTester.GenerateCodeForm.resources" />
+    <EmbeddedResource Include="RegexTester.PropertiesForm.resources" />
+    <EmbeddedResource Include="RegexTester.MainForm.resources" />
+    <EmbeddedResource Include="RegexTester.EscapeForm.resources" />
+    <EmbeddedResource Include="RegexTester.Resources.resources" />
+    <EmbeddedResource Include="RegexTester.CompileForm.resources" />
+    <EmbeddedResource Include="RegexTester.Regexes.xml" />
+    <EmbeddedResource Include="RegexTester.AboutBoxForm.resources" />
+  </ItemGroup>
+</Project>
